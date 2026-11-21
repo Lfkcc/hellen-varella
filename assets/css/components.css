@@ -205,6 +205,19 @@
   background: var(--support);
   border-radius: var(--radius-pill);
 }
+.pack:has(.pack__media) { padding-top: 0; overflow: hidden; }
+.pack__media {
+  display: block;
+  width: calc(100% + 2 * clamp(1.4rem, 1rem + 1.5vw, 2rem));
+  margin-left: calc(-1 * clamp(1.4rem, 1rem + 1.5vw, 2rem));
+  margin-bottom: var(--space-xs);
+}
+.pack__photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
 .pack .button { margin-top: auto; }
 .pack--feature { border-color: var(--cta); background: color-mix(in srgb, var(--support) 22%, var(--surface)); }
 .pack--feature .pack__kicker { color: var(--cta); }
@@ -299,6 +312,19 @@
 .work--dark h3 { color: var(--on-dark); }
 .work--dark h3 em { color: var(--support); }
 .work--dark p { color: var(--on-dark-80); }
+.work--photo { min-height: 22rem; }
+.work--photo .work__media { position: absolute; inset: 0; }
+.work--photo .work__photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+.work--photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, color-mix(in srgb, var(--bg) 94%, transparent) 0%, color-mix(in srgb, var(--bg) 40%, transparent) 46%, transparent 72%);
+}
+.work--dark.work--photo::after {
+  background: linear-gradient(to top, color-mix(in srgb, var(--plum) 88%, transparent) 0%, transparent 68%);
+}
+.work--photo > :not(.work__media) { position: relative; z-index: 1; }
 .work[hidden] { display: none; }
 
 @media (max-width: 760px) {
@@ -408,6 +434,15 @@
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   padding: clamp(1.6rem, 1rem + 2vw, 2.4rem);
+}
+.persona__photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-sm);
+  display: block;
 }
 .persona__card .name {
   font-family: var(--font-display);
