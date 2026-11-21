@@ -1,6 +1,18 @@
-# dependências (o site é sem build; só as ferramentas em tools/ podem usar)
+# dependências
 node_modules/
-package-lock.json
+
+# segredos: o exemplo pode ser commitado, o arquivo real não
+.env
+.env.*
+!.env.example
+
+# build e cache
+dist/
+frontend/tools/.cache/
+*.log
+
+# fotos originais ficam fora do git; entram só as versões otimizadas
+fotos-originais/
 
 # sistema
 .DS_Store
@@ -11,10 +23,3 @@ desktop.ini
 .vscode/
 *.swp
 *~
-
-# saídas locais das ferramentas
-frontend/tools/.cache/
-*.log
-
-# fotos originais ficam fora do git; entram só as versões otimizadas
-fotos-originais/
