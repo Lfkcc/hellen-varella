@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Painel · Studio Hellen Varella</title>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="painel.css" />
+</head>
+<body>
+  <main id="login" class="tela">
+    <form id="form-login">
+      <p class="marca">Studio Hellen Varella</p>
+      <h1>Painel</h1>
+      <label>E-mail
+        <input name="email" type="email" autocomplete="username" required />
+      </label>
+      <label>Senha
+        <input name="senha" type="password" autocomplete="current-password" required />
+      </label>
+      <label>Endereço da API
+        <input name="api" type="url" value="http://127.0.0.1:3000" required />
+      </label>
+      <button type="submit">Entrar</button>
+      <p id="login-erro" class="erro" role="alert"></p>
+    </form>
+  </main>
+
+  <div id="app" hidden>
+    <header class="topo">
+      <div>
+        <p class="marca">Studio Hellen Varella</p>
+        <h1>Painel</h1>
+      </div>
+      <button id="sair" type="button">Sair</button>
+    </header>
+    <nav class="abas" aria-label="Seções do painel">
+      <button type="button" data-aba="combos" aria-pressed="true">Combos</button>
+      <button type="button" data-aba="servicos" aria-pressed="false">Serviços</button>
+      <button type="button" data-aba="portfolio" aria-pressed="false">Portfólio</button>
+      <button type="button" data-aba="estudio" aria-pressed="false">Estúdio</button>
+      <button type="button" data-aba="faq" aria-pressed="false">Perguntas</button>
+      <button type="button" data-aba="mensagens" aria-pressed="false">Mensagens</button>
+    </nav>
+    <p id="aviso" class="aviso" role="status"></p>
+    <section id="aba-combos"></section>
+    <section id="aba-servicos" hidden></section>
+    <section id="aba-portfolio" hidden></section>
+    <section id="aba-estudio" hidden></section>
+    <section id="aba-faq" hidden></section>
+    <section id="aba-mensagens" hidden></section>
+  </div>
+  <script src="painel.js"></script>
+</body>
+</html>
