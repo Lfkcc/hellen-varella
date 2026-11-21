@@ -42,6 +42,17 @@ Ou abra `frontend/index.html` direto no navegador.
    dados que só a Hellen confirma.
 2. `node frontend/tools/check-links.mjs` — tem que passar sem erros.
 
+## API
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+A rota de saúde responde em http://127.0.0.1:3000/health.
+O banco entra na fase seguinte. Copie `.env.example` para `backend/.env` quando for ligar o Postgres.
+
 ## Licença
 
 O código está sob a licença MIT (`LICENSE`). As fotos são de autoria da
