@@ -5,6 +5,7 @@ node_modules/
 .env
 .env.*
 !.env.example
+*.local.txt
 
 # build e cache
 dist/
