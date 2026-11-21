@@ -147,11 +147,11 @@ Arquivo `docs/RELATORIO-COLABORACAO.md` (e seção "Equipe" no README).
 Commit: `docs: relatório de colaboração da equipe`.
 
 ## Fase 4 — Backend mínimo
-- [ ] `backend/package.json`, `src/server.js`, rota `GET /health`.
-- [ ] CORS liberado só para o domínio do front e `localhost`.
-- [ ] Configuração por variáveis de ambiente (`PORT`, `DATABASE_URL`,
+- [x] `backend/package.json`, `src/server.js`, rota `GET /health`.
+- [x] CORS liberado só para o domínio do front e `localhost`.
+- [x] Configuração por variáveis de ambiente (`PORT`, `DATABASE_URL`,
   `CORS_ORIGIN`).
-- [ ] Teste de `/health` (`node:test` + `supertest`).
+- [x] Teste de `/health` (`node:test` + `supertest`).
 
 Commits: `feat(back): servidor Express com /health`, `test(back): cobrir /health`.
 
