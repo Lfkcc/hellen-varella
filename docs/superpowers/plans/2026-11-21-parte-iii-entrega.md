@@ -163,7 +163,7 @@ Tabelas: `studio` (dados, `foto_hellen_url`, `foto_hero_url`, `og_url`),
 mensagem, criado_em), `admins` (e-mail, hash de senha).
 - [x] `database/schema.sql` e `database/seed.sql` gerados a partir de
   `frontend/data/*.json` (fonte de verdade atual).
-- [ ] Rodar no Supabase quando `backend/.env` tiver `DATABASE_URL`.
+- [x] Rodado no Supabase em 21/11/2026. O projeto responde e o seed inseriu os dados do site.
 - [x] Script `npm run db:seed` no backend.
 
 Commits: `feat(db): schema inicial`, `feat(db): seed com combos e serviços`.
