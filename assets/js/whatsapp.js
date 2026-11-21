@@ -6,8 +6,8 @@
   "use strict";
 
   var body = document.body;
-  var numero = body.getAttribute("data-wa-number") || "";
-  var linkCurto = body.getAttribute("data-wa-link") || "";
+  var numero = "";
+  var linkCurto = "";
 
   function montaUrl(msg, prefereLinkCurto) {
     if (prefereLinkCurto && linkCurto && !msg) return linkCurto;
@@ -16,19 +16,25 @@
     return msg ? base + "?text=" + encodeURIComponent(msg) : base;
   }
 
-  document.querySelectorAll("[data-wa]").forEach(function (a) {
-    var msg = a.getAttribute("data-wa-msg") || "";
-    var curto = a.hasAttribute("data-wa-curto");
-    a.setAttribute("href", montaUrl(msg, curto));
-    a.setAttribute("target", "_blank");
-    a.setAttribute("rel", "noopener");
-  });
-
-  // Telefone (tel:) — a partir de data-tel no body
-  var tel = body.getAttribute("data-tel");
-  if (tel) {
-    document.querySelectorAll("[data-tel-link]").forEach(function (a) {
-      a.setAttribute("href", "tel:" + tel.replace(/[^\d+]/g, ""));
+  function montar() {
+    numero = body.getAttribute("data-wa-number") || "";
+    linkCurto = body.getAttribute("data-wa-link") || "";
+    document.querySelectorAll("[data-wa]").forEach(function (a) {
+      var msg = a.getAttribute("data-wa-msg") || "";
+      var curto = a.hasAttribute("data-wa-curto");
+      a.setAttribute("href", montaUrl(msg, curto));
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener");
     });
+
+    var tel = body.getAttribute("data-tel");
+    if (tel) {
+      document.querySelectorAll("[data-tel-link]").forEach(function (a) {
+        a.setAttribute("href", "tel:" + tel.replace(/[^\d+]/g, ""));
+      });
+    }
   }
+
+  montar();
+  document.addEventListener("hv:whatsapp", montar);
 })();
