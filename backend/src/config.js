@@ -30,5 +30,8 @@ export function loadConfig(env = process.env) {
     port: Number(env.PORT || 3000),
     corsOrigin: origem.split(",").map((item) => item.trim()).filter(Boolean),
     databaseUrl: env.DATABASE_URL || "",
+    jwtSecret: env.JWT_SECRET || "",
+    supabaseUrl: (env.SUPABASE_URL || "").replace(/\/$/, ""),
+    supabaseServiceKey: env.SUPABASE_SERVICE_ROLE_KEY || "",
   };
 }

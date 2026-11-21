@@ -1,5 +1,6 @@
 import cors from "cors";
 import express from "express";
+import { rotasAdmin } from "./admin-rotas.js";
 import { rotasPublicas } from "./rotas.js";
 
 export function createApp(config, db) {
@@ -20,7 +21,10 @@ export function createApp(config, db) {
     res.json({ ok: true });
   });
 
-  if (db) app.use("/api", rotasPublicas(db, config));
+  if (db) {
+    app.use("/api/admin", rotasAdmin(db, config));
+    app.use("/api", rotasPublicas(db, config));
+  }
 
   app.use((_req, res) => {
     res.status(404).json({ erro: "não encontrado" });
