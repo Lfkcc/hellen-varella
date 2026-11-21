@@ -1,0 +1,20 @@
+# dependências (o site é sem build; só as ferramentas em tools/ podem usar)
+node_modules/
+package-lock.json
+
+# sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editores
+.vscode/
+*.swp
+*~
+
+# saídas locais das ferramentas
+tools/.cache/
+*.log
+
+# fotos originais ficam fora do git; entram só as versões otimizadas
+fotos-originais/
