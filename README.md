@@ -64,7 +64,23 @@ O Postgres fica no Supabase. Os scripts estão em `database/schema.sql` e `datab
 npm run db:seed
 ```
 
-O comando recria as tabelas e insere combos, serviços, FAQ e portfólio. Dá para fazer o mesmo colando os dois SQL, nesta ordem, no SQL Editor.
+O comando recria as tabelas e insere combos, serviços, FAQ e portfólio. A tabela de administradores não é apagada. Dá para fazer o mesmo colando os dois SQL, nesta ordem, no SQL Editor.
+
+## Painel
+
+A edição fica em `frontend/admin/` (não entra no sitemap e pede para não ser indexada). O login devolve um token de duas horas, guardado só na aba do navegador.
+
+A senha da Hellen é criada na máquina local e não entra no Git:
+
+```bash
+cd backend
+ADMIN_EMAIL="hellen@exemplo.test" ADMIN_SENHA="uma-senha-de-8-ou-mais" npm run admin:criar
+```
+
+Conta de demonstração, só para o professor avaliar o painel. Não é a senha da Hellen.
+
+- E-mail: `professor@studiohellen.test`
+- Senha: `studio-demo-7kQ4`
 
 ## Licença
 

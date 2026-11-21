@@ -191,6 +191,8 @@ requisições.
 - [x] Respostas no mesmo formato dos JSON atuais, para o front mudar pouco.
 
 ## Fase 8 — Painel de edição para a Hellen
+- [x] Login, upload, combos, portfólio, estúdio, FAQ e mensagens.
+- [x] Página `frontend/admin/` com noindex e Disallow.
 Página `frontend/admin/` (fora do sitemap, `noindex`, `Disallow` no
 `robots.txt`), pensada para uso no celular, sem mexer em código.
 
