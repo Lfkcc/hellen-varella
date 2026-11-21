@@ -7,8 +7,9 @@ Lucas Fernandes, Luiz Felipe e Otavio.
 
 1. Não coloque senha, token, chave de API nem arquivo `.env`.
    O modelo sem valores reais é o `.env.example`.
-2. Não coloque fotos originais. A pasta `fotos-originais/` fica de fora do Git.
-   Entram só as versões otimizadas, e só com autorização de imagem.
+2. As fotos são de autoria da Hellen Varella e podem ser usadas livremente
+   neste repositório e no site. A pasta `fotos-originais/` fica de fora do Git.
+   Entram as versões otimizadas.
 3. Não descreva caminho da sua máquina (`C:\Users\...`, `/home/...`).
 
 ## Mensagens de commit

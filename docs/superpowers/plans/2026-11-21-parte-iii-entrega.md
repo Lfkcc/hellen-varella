@@ -41,8 +41,8 @@ Render (back).
 - [ ] Conta Cloudflare (Pages) ou Netlify.
 - [ ] Confirmar com a Hellen os dados pendentes de `docs/CHECKLIST-CONTEUDO.md`
   (e-mail, endereço, horário, preços, FAQ).
-- [ ] **Autorização de imagem** das clientes que aparecem nas fotos (gestante,
-  noiva, antes e depois). Sem autorização, a foto não entra no site público.
+- [x] Uso das fotos: autoria da Hellen Varella, liberado para este repositório
+  e para o site.
 - [ ] Dizer, para cada integrante, o que fez de fato (insumo do relatório de
   colaboração, fase 3).
 - [ ] Combinar a data da apresentação e avisar a Hellen sobre o e-mail de
@@ -174,7 +174,7 @@ Commits: `feat(db): schema inicial`, `feat(db): seed com combos e serviços`.
 - [ ] Classificar cada imagem por tema (gestante, noiva, making, cabelo,
   antes-depois, social, artístico, Hellen, combo 1 a 4). Eu abro as imagens e
   proponho a tabela; você corrige. Gera `docs/FOTOS-MAPA.md` (arquivo → tema →
-  slot → autorização OK/pendente).
+  slot). O uso no repositório e no site já está liberado por ela.
 - [ ] Nomes finais padronizados: `portfolio/gestante-01.jpg`,
   `combos/combo-2.jpg`, `hellen/retrato.jpg`.
 - [ ] Remover EXIF (localização, aparelho) e recortar interface de captura de
@@ -280,7 +280,7 @@ cada fase, para o histórico mostrar o avanço aos poucos.
 
 ## Riscos
 - Render grátis dorme: aviso no README e dados de reserva no front.
-- Fotos de clientes sem autorização: ficam de fora até ter o aceite.
+- As fotos são da Hellen e já podem entrar no repositório e no site.
 - Capturas de tela como foto final: qualidade baixa; pedir os originais.
 - Painel com upload é a parte mais sensível: senha forte, limites e testes.
 - Reescrever o histórico exige `--force` num repositório público; só fazer

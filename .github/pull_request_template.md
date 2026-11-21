@@ -10,4 +10,4 @@
 ## Conferência
 
 - [ ] Sem `.env`, senha, token ou caminho da máquina local
-- [ ] Fotos novas têm autorização e texto alternativo
+- [ ] Fotos novas são da Hellen, entram otimizadas e têm texto alternativo

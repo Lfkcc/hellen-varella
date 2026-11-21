@@ -44,8 +44,9 @@ Ou abra `frontend/index.html` direto no navegador.
 
 ## Licença
 
-O código está sob a licença MIT (`LICENSE`). Fotos, marca, nome e textos da
-Hellen Varella pertencem a ela e não entram nessa licença.
+O código está sob a licença MIT (`LICENSE`). As fotos são de autoria da
+Hellen Varella e podem ser usadas livremente neste repositório e no site.
+Marca, nome e textos do studio continuam dela.
 
 ## Histórico
 
