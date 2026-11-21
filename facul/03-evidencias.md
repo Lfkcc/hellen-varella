@@ -6,7 +6,7 @@ Parte II. Registro do que já existe e do que ainda precisa ser coletado. Conver
 
 | Evidência | O que prova | Onde está |
 | --- | --- | --- |
-| Briefing escrito pela Hellen | Ela definiu posicionamento, visão, mensagem central, público, concorrência, o que espera das clientes, persona, sentimentos da marca, o que a identidade não pode parecer, a transformação e o diferencial. Também definiu paleta e tipografia. | `E:\gtonga\Meu briefing.pdf` (4 páginas). Transcrição bloco a bloco, sem reescrever o sentido, em `docs/BRIEFING.md`. Página 4 (painel visual) em `docs/PAINEL-SEMANTICO.md`. |
+| Briefing escrito pela Hellen | Ela definiu posicionamento, visão, mensagem central, público, concorrência, o que espera das clientes, persona, sentimentos da marca, o que a identidade não pode parecer, a transformação e o diferencial. Também definiu paleta e tipografia. | PDF de 4 páginas, fora do repositório. Transcrição bloco a bloco, sem reescrever o sentido, em `docs/BRIEFING.md`. Página 4 (painel visual) em `docs/PAINEL-SEMANTICO.md`. |
 | Oferta já praticada por ela | Combos, preços, sinal, cursos, telefone e @ usados na vitrine vieram de material anterior da cliente, não de suposição desta etapa. | Campo `_fonte` em `data/servicos.json` e `data/studio.json`. |
 | Cadastro público e ficha do studio | Confirma MEI em Fraiburgo, o telefone e a atividade de estética. Também revela divergências (endereço 117 × 129, dois links de WhatsApp, horário de listagem) que só ela pode fechar. | Citado em `01-analise-de-requisitos.md`, seção 4, com URL e data da consulta. |
 

@@ -10,20 +10,11 @@
 
 ---
 
-## 1. Qual é o repositório certo
+## 1. Qual é o repositório
 
-```
-E:\.projects\hellen-varella
-```
-
-É a pasta de trabalho da vitrine. O Git **não é desta pasta**: o histórico e
-o GitHub ficam no repositório principal do Luiz:
-
-- local: `E:\.projects\Luiz` → subpasta `hellen-varella/`
-- remote: `https://github.com/Lfkcc/Luiz` (`origin`, branch `main`)
-
-Não há `origin` em `E:\.projects\hellen-varella`. Puxar/enviar = `git pull` /
-`git push` **dentro de `E:\.projects\Luiz`**.
+O repositório público é [Lfkcc/hellen-varella](https://github.com/Lfkcc/hellen-varella),
+branch `main`. Quem for trabalhar clona essa URL. O site fica em `frontend/`,
+a documentação em `docs/` e as entregas da disciplina em `facul/`.
 
 ### "Os sites" — um ou vários?
 

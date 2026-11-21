@@ -1,7 +1,8 @@
 # Briefing da cliente — transcrição e mapeamento
 
-> Entrega 2. Fonte: **`e:\gtonga\Meu briefing.pdf`**, escrito pela própria
-> Hellen (cliente e dona do studio). Páginas 1–3 = texto (abaixo, transcrito
+> Entrega 2. Fonte: briefing em PDF escrito pela própria
+> Hellen (cliente e dona do studio). O arquivo original fica com a equipe e
+> não entra no repositório. Páginas 1–3 = texto (abaixo, transcrito
 > literal). Página 4 = painel semântico visual → `docs/PAINEL-SEMANTICO.md`.
 >
 > Regra: nada aqui foi reinterpretado. Cada bloco tem **onde ele aparece no

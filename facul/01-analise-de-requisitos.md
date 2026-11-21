@@ -4,7 +4,7 @@ Documento da Parte II da extensão. Data de referência: 13 de outubro de 2026.
 
 O sistema é a vitrine do studio (maquiagem, cabelo e fotografia no mesmo atendimento), em Fraiburgo/SC. A reserva continua no WhatsApp. Este texto classifica o que a microempreendedora já pediu, o que a pesquisa de mercado acrescentou e o que ainda depende da validação dela sobre o protótipo.
 
-Fonte primária de identidade e de demanda: briefing escrito pela própria Hellen (`E:\gtonga\Meu briefing.pdf`, transcrito em `docs/BRIEFING.md`). Nada que ela não tenha dito entra aqui como requisito confirmado. O que veio de cadastro público, de material anterior ou de decisão de projeto está rotulado.
+Fonte primária de identidade e de demanda: briefing escrito pela própria Hellen (PDF de 4 páginas, fora do repositório; transcrição em `docs/BRIEFING.md`). Nada que ela não tenha dito entra aqui como requisito confirmado. O que veio de cadastro público, de material anterior ou de decisão de projeto está rotulado.
 
 ---
 

@@ -7,9 +7,9 @@ from docx import Document
 from docx.oxml.ns import qn
 from docx.text.paragraph import Paragraph
 
-SRC = Path(r"C:\Users\User\Downloads\relatório de extensão.docx")
-OUT = Path(__file__).resolve().parent / "relatorio-de-extensao.docx"
-OUT_DOWNLOADS = Path(r"C:\Users\User\Downloads\relatório de extensão - preenchido.docx")
+PASTA = Path(__file__).resolve().parent
+SRC = PASTA / "modelo-relatorio.docx"
+OUT = PASTA / "relatorio-de-extensao.docx"
 
 
 def set_text(paragraph, text):
@@ -43,6 +43,11 @@ def fill_next(doc, prefix, blocks):
 
 
 def main():
+    if not SRC.is_file():
+        raise SystemExit(
+            "Falta facul/modelo-relatorio.docx (o modelo em branco da disciplina). "
+            "O script grava só facul/relatorio-de-extensao.docx."
+        )
     doc = Document(str(SRC))
 
     for p in doc.paragraphs:
@@ -273,9 +278,7 @@ def main():
         t2.rows[i + 1].cells[4].text = produto[i]
 
     doc.save(str(OUT))
-    doc.save(str(OUT_DOWNLOADS))
     print(OUT)
-    print(OUT_DOWNLOADS)
 
 
 if __name__ == "__main__":
