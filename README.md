@@ -51,7 +51,20 @@ npm run dev
 ```
 
 A rota de saúde responde em http://127.0.0.1:3000/health.
-O banco entra na fase seguinte. Copie `.env.example` para `backend/.env` quando for ligar o Postgres.
+
+## Banco
+
+O Postgres fica no Supabase. Os scripts estão em `database/schema.sql` e `database/seed.sql`.
+
+1. No projeto do Supabase, abra Project Settings → Database e copie a connection string (URI).
+2. Cole em `backend/.env` como `DATABASE_URL`. Esse arquivo não entra no Git.
+3. Na raiz do backend:
+
+```bash
+npm run db:seed
+```
+
+O comando recria as tabelas e insere combos, serviços, FAQ e portfólio. Dá para fazer o mesmo colando os dois SQL, nesta ordem, no SQL Editor.
 
 ## Licença
 
