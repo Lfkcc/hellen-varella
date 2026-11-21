@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /hellen-varella/admin/
 
-# Trocar pelo domínio real quando publicar:
-Sitemap: https://[DOMINIO-QUANDO-PUBLICAR]/sitemap.xml
+Sitemap: https://lfkcc.github.io/hellen-varella/sitemap.xml

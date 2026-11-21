@@ -452,6 +452,26 @@
 }
 .persona__card ul li { padding: 0.55rem 0; border-top: 1px solid var(--line); font-size: var(--step--1); }
 .persona__body { display: flex; flex-direction: column; gap: var(--space-sm); }
+.contato {
+  display: grid;
+  gap: 0.75rem;
+  width: min(28rem, 100%);
+  margin: var(--space-md) auto 0;
+  text-align: left;
+}
+.contato label { display: grid; gap: 0.35rem; font-size: var(--step--1); }
+.contato input,
+.contato textarea {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border: 0;
+  border-radius: 0.7rem;
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+}
+.contato__status { min-height: 1.3rem; color: var(--on-dark); }
+
 .persona__body .side-note {
   font-size: var(--step--1);
   color: var(--ink-70);

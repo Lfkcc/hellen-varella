@@ -8,8 +8,11 @@
 
   var botoes = filtros.querySelectorAll("button[data-filter]");
   var obras = grade.querySelectorAll("[data-cat]");
+  var atual = "todos";
 
   function aplicar(cat) {
+    atual = cat;
+    obras = grade.querySelectorAll("[data-cat]");
     botoes.forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.dataset.filter === cat));
     });
@@ -30,4 +33,5 @@
   // Estado inicial a partir do hash (#portfolio=noiva)
   var m = /portfolio=([a-z-]+)/.exec(location.hash);
   aplicar(m ? m[1] : "todos");
+  document.addEventListener("hv:portfolio", function () { aplicar(atual); });
 })();

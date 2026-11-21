@@ -52,6 +52,12 @@ npm run dev
 
 A rota de saúde responde em http://127.0.0.1:3000/health.
 
+No computador, `frontend/assets/js/api.js` lê essa API e troca preços, fotos, portfólio e perguntas. Se a API não responder, a página fica com o HTML que já está no arquivo. O formulário no fim da página envia `POST /api/contatos` e mostra "Enviando…" ou o erro. Fora de localhost o script não chama `127.0.0.1`; um endereço público entra por `window.HV_API` antes dos scripts.
+
+## Site publicado
+
+A vitrine está em https://lfkcc.github.io/hellen-varella/. O GitHub Pages publica a pasta `frontend/`. Lá o visitante vê o site estático e o WhatsApp. O formulário e os dados ao vivo dependem da API, que ainda roda só na máquina local: a conta do Render não está configurada neste ambiente. Quando o backend tiver URL pública, ela entra em `window.HV_API` e a origem `https://lfkcc.github.io` entra em `CORS_ORIGIN`. O painel (`/admin/`) já tem um campo para esse endereço.
+
 ## Banco
 
 O Postgres fica no Supabase. Os scripts estão em `database/schema.sql` e `database/seed.sql`.

@@ -226,11 +226,11 @@ Commits: `feat(back): login do administrador`, `feat(back): upload de fotos`,
 `feat(front): editor de combos`, `test(back): rotas protegidas`.
 
 ## Fase 9 — Front consumindo a API
-- [ ] `frontend/assets/js/api.js` com `API_URL` configurável.
-- [ ] Combos, estúdio, portfólio e FAQ vêm da API; JSON local como reserva se
+- [x] `frontend/assets/js/api.js` com `API_URL` configurável.
+- [x] Combos, estúdio, portfólio e FAQ vêm da API; HTML já escrito como reserva se
   a API estiver dormindo (Render grátis).
-- [ ] Formulário de contato enviando para `POST /api/contatos`.
-- [ ] Estado de carregamento e erro; conferir no navegador (celular e
+- [x] Formulário de contato enviando para `POST /api/contatos`.
+- [x] Estado de carregamento e erro; conferido no navegador (celular e
   computador).
 
 ## Fase 10 — Revisão e testes
@@ -248,8 +248,9 @@ conexão, credenciais de demonstração do painel, links do deploy, estrutura de
 pastas, como o front se liga ao back, equipe e licença.
 
 ## Fase 12 — Deploy
+A vitrine pública está no GitHub Pages (`frontend/`). O backend continua local até existir conta no Render.
 - [ ] Backend no Render (root `backend/`, variáveis no painel).
-- [ ] Front no Cloudflare Pages (root `frontend/`).
+- [x] Front publicado (GitHub Pages, pasta `frontend/`). Cloudflare Pages continua o destino planejado, se a conta existir.
 - [ ] Atualizar `CORS_ORIGIN` e `API_URL`; testar de ponta a ponta, incluindo
   login no painel e upload de foto.
 - [ ] Registrar os dois links no README e na descrição do repositório.

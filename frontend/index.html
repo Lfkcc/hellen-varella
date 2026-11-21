@@ -6,13 +6,14 @@
   <title>Hellen Varella · Studio de beleza e fotografia · Fraiburgo, SC</title>
   <meta name="description" content="Maquiagem, cabelo e fotografia no mesmo lugar. Você sai pronta e guarda o momento em imagens. Studio Hellen Varella, Fraiburgo/SC." />
   <meta name="theme-color" content="#3B1C28" />
-  <link rel="canonical" href="https://[DOMINIO-QUANDO-PUBLICAR]/" />
+  <link rel="canonical" href="https://lfkcc.github.io/hellen-varella/" />
 
   <!-- Open Graph / social -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Hellen Varella · Studio de beleza e fotografia" />
   <meta property="og:description" content="Você vai ter dó de tirar a maquiagem. Maquiagem, cabelo e fotografia no mesmo lugar — Fraiburgo/SC." />
-  <meta property="og:image" content="assets/img/placeholder/ensaio.svg" />
+  <meta property="og:image" content="https://lfkcc.github.io/hellen-varella/assets/img/hero/retrato.jpg" />
+  <meta property="og:url" content="https://lfkcc.github.io/hellen-varella/" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
@@ -224,7 +225,7 @@
         </div>
 
         <div class="packs" data-slot="valores.combos">
-          <article class="pack reveal">
+          <article class="pack reveal" data-id="combo-1">
             <picture class="pack__media">
               <source srcset="assets/img/combos/combo-1.webp" type="image/webp" />
               <img class="pack__photo" src="assets/img/combos/combo-1.jpg" alt="Retrato com maquiagem profissional" width="800" height="600" />
@@ -241,7 +242,7 @@
             <a class="button" href="#agenda" data-wa data-wa-msg="Oi, Hellen! Vi o site e quero o Combo 1 — Maquiagem + ensaio (R$ 300). Cidade: Fraiburgo." data-track="combo-1">Agendar</a>
           </article>
 
-          <article class="pack pack--feature reveal">
+          <article class="pack pack--feature reveal" data-id="combo-2">
             <picture class="pack__media">
               <source srcset="assets/img/combos/combo-2.webp" type="image/webp" />
               <img class="pack__photo" src="assets/img/combos/combo-2.jpg" alt="Cabelo longo com maquiagem, pronto para o ensaio" width="800" height="600" />
@@ -259,7 +260,7 @@
             <a class="button" href="#agenda" data-wa data-wa-msg="Oi, Hellen! Vi o site e quero o Combo 2 — Maquiagem + cabelo + ensaio (R$ 370). Cidade: Fraiburgo. Data que penso: __ / Ocasião: __" data-track="combo-2">Agendar</a>
           </article>
 
-          <article class="pack reveal">
+          <article class="pack reveal" data-id="combo-3">
             <picture class="pack__media">
               <source srcset="assets/img/combos/combo-3.webp" type="image/webp" />
               <img class="pack__photo" src="assets/img/combos/combo-3.jpg" alt="Penteado preso e produção completa" width="800" height="600" />
@@ -278,7 +279,7 @@
             <a class="button" href="#agenda" data-wa data-wa-msg="Oi, Hellen! Vi o site e quero o Combo 3 — Produção completa + ensaio (R$ 420)." data-track="combo-3">Agendar</a>
           </article>
 
-          <article class="pack reveal">
+          <article class="pack reveal" data-id="combo-4">
             <picture class="pack__media">
               <source srcset="assets/img/combos/combo-4.webp" type="image/webp" />
               <img class="pack__photo" src="assets/img/combos/combo-4.jpg" alt="Ensaio fotográfico, retrato na janela do carro" width="800" height="600" />
@@ -294,7 +295,7 @@
             <a class="button" href="#agenda" data-wa data-wa-msg="Oi, Hellen! Vi o site e quero o Combo 4 — Só ensaio (R$ 260)." data-track="combo-4">Agendar</a>
           </article>
 
-          <article class="pack reveal">
+          <article class="pack reveal" data-id="corte-feminino">
             <span class="pack__kicker">Cabelo</span>
             <h3>Corte feminino <span style="font-size: var(--step--1); color: var(--ink-70)">com escova</span></h3>
             <p class="pack__price">R$ 60</p>
@@ -307,7 +308,7 @@
             <a class="button" href="#agenda" data-wa data-wa-msg="Oi, Hellen! Quero agendar corte feminino com escova (R$ 60). Não é corte curto." data-track="corte">Agendar</a>
           </article>
 
-          <article class="pack pack--soft reveal">
+          <article class="pack pack--soft reveal" data-id="quinta-especial">
             <span class="pack__kicker">Promoção do grid</span>
             <h3>Quinta Especial</h3>
             <p class="pack__price">R$ 150</p>
@@ -673,8 +674,22 @@
         <span class="eyebrow eyebrow--on-dark">Agenda</span>
         <h2 class="mx-auto" style="max-width: 18ch">Nossa agenda está aberta.</h2>
         <p class="lead mx-auto">
-          Fraiburgo, SC. Sem formulário: a conversa começa no WhatsApp, do mesmo jeito que no Instagram.
+          Fraiburgo, SC. A conversa começa no WhatsApp. Se preferir, deixe uma mensagem.
         </p>
+        <p class="lead mx-auto" data-slot="agenda.detalhe" hidden></p>
+        <form class="contato" data-contato>
+          <label>Nome
+            <input name="nome" autocomplete="name" required minlength="2" maxlength="80" />
+          </label>
+          <label>Telefone
+            <input name="telefone" autocomplete="tel" required inputmode="tel" />
+          </label>
+          <label>Mensagem
+            <textarea name="mensagem" required minlength="5" maxlength="1000" rows="4"></textarea>
+          </label>
+          <button class="button button--support" type="submit">Enviar mensagem</button>
+          <p class="contato__status" data-contato-status role="status"></p>
+        </form>
 
         <!-- agenda.js preenche isto quando data/agenda.json tiver semanas reais -->
         <div data-agenda></div>
@@ -743,6 +758,7 @@
   <script defer src="assets/js/lightbox.js"></script>
   <script defer src="assets/js/agenda.js"></script>
   <script defer src="assets/js/depoimentos.js"></script>
+  <script defer src="assets/js/api.js"></script>
   <!-- analytics.js é opt-in: descomente e configure o endpoint para ligar
   <script>window.HV_ANALYTICS = { endpoint: "" };</script>
   <script defer src="assets/js/analytics.js"></script>
