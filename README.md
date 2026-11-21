@@ -8,11 +8,11 @@ no mesmo atendimento) — Fraiburgo, SC.
 ## Para ver rodando
 
 ```bash
-node tools/serve.mjs
+node frontend/tools/serve.mjs
 # abre em http://127.0.0.1:4173/
 ```
 
-Ou abra `index.html` direto no navegador.
+Ou abra `frontend/index.html` direto no navegador.
 
 ## O que é
 
@@ -26,20 +26,21 @@ Ou abra `index.html` direto no navegador.
 
 | Pasta | O que tem |
 |-------|-----------|
-| `index.html` | a vitrine |
-| `404.html`, `obrigada.html` | páginas de apoio (na identidade) |
-| `assets/css/` | design system em camadas (`tokens` → `base` → `layout` → `components` → `utilities`) |
-| `assets/js/` | módulos ativos (`nav`, `reveal`, `portfolio`, `whatsapp`, `pricing`) e ociosos (`lightbox`, `agenda`, `depoimentos`, `analytics`) |
-| `assets/img/`, `assets/fonts/` | READMEs com o que colocar (fotos e a fonte Perandory) |
-| `data/*.json` | **fonte de verdade do conteúdo** — cada arquivo diz de onde veio cada dado |
+| `frontend/index.html` | a vitrine |
+| `frontend/404.html`, `frontend/obrigada.html` | páginas de apoio (na identidade) |
+| `frontend/assets/css/` | design system em camadas (`tokens` → `base` → `layout` → `components` → `utilities`) |
+| `frontend/assets/js/` | módulos ativos (`nav`, `reveal`, `portfolio`, `whatsapp`, `pricing`) e ociosos (`lightbox`, `agenda`, `depoimentos`, `analytics`) |
+| `frontend/assets/img/`, `frontend/assets/fonts/` | READMEs com o que colocar (fotos e a fonte Perandory) |
+| `frontend/data/*.json` | **fonte de verdade do conteúdo** — cada arquivo diz de onde veio cada dado |
+| `frontend/tools/*.mjs` | `serve` (ativo) + `build-pages`, `new-section`, `check-links`, `optimize-images` |
 | `docs/` | mapa do repo, briefing, design system, slot-map, checklist, arquitetura |
-| `tools/*.mjs` | `serve` (ativo) + `build-pages`, `new-section`, `check-links`, `optimize-images` |
+| `facul/` | entregas anteriores da disciplina |
 
 ## Antes de publicar
 
 1. `docs/CHECKLIST-CONTEUDO.md` — falta principalmente **as fotos** e alguns
    dados que só a Hellen confirma.
-2. `node tools/check-links.mjs` — tem que passar sem erros.
+2. `node frontend/tools/check-links.mjs` — tem que passar sem erros.
 
 ## Histórico
 

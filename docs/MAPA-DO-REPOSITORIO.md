@@ -3,6 +3,10 @@
 > Entrega 1 do trabalho: "puxar o repositório explicando". Quem nunca viu
 > este projeto deve entender, lendo isto, **o que o repo é** e **o que o site
 > faz** — antes e depois da refatoração desta sessão.
+>
+> O site está em `frontend/` (páginas, `assets/`, `data/`, `tools/`).
+> `docs/` e `facul/` ficam na raiz do repositório. As árvores abaixo
+> descrevem o estado da refatoração, antes dessa separação.
 
 ---
 

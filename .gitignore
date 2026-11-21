@@ -13,7 +13,7 @@ desktop.ini
 *~
 
 # saídas locais das ferramentas
-tools/.cache/
+frontend/tools/.cache/
 *.log
 
 # fotos originais ficam fora do git; entram só as versões otimizadas
