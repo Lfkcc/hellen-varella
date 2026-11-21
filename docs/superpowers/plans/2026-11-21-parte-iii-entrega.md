@@ -187,8 +187,8 @@ Commits: `feat(front): contêiner da foto da Hellen`,
 Rotas: `GET /api/studio`, `/api/combos`, `/api/servicos`, `/api/faq`,
 `/api/portfolio?categoria=`; `POST /api/contatos` com validação e limite de
 requisições.
-- [ ] Um commit por rota, cada um com teste.
-- [ ] Respostas no mesmo formato dos JSON atuais, para o front mudar pouco.
+- [x] Rotas públicas com teste: studio, combos, serviços, FAQ, portfólio e contato.
+- [x] Respostas no mesmo formato dos JSON atuais, para o front mudar pouco.
 
 ## Fase 8 — Painel de edição para a Hellen
 Página `frontend/admin/` (fora do sitemap, `noindex`, `Disallow` no
