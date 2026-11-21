@@ -1,8 +1,9 @@
 -- Dados mínimos do site, tirados de frontend/data/*.json
--- Rode depois de database/schema.sql. Pode rodar de novo: apaga e reinsere.
+-- Rode depois de database/schema.sql. Pode rodar de novo: apaga e reinsere o conteúdo.
+-- A tabela admins fica de fora: a senha do painel não volta para o repositório.
 begin;
 truncate table
-  contatos, admins, portfolio, portfolio_categorias, faq,
+  contatos, portfolio, portfolio_categorias, faq,
   cursos, servicos_detalhe, servicos_avulsos, combos, studio
 restart identity;
 
