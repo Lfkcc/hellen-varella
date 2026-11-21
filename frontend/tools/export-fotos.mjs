@@ -18,13 +18,18 @@ const trabalhos = [
   ["IMG_0259.JPG.jpeg", "portfolio/gestante-02", 1400],
   ["IMG_3741.PNG", "portfolio/gestante-03", 1400],
   ["IMG_0220.JPG.jpeg", "portfolio/gestante-04", 1400],
+  ["IMG_3743.PNG", "portfolio/gestante-05", 1400],
+  ["IMG_3745_(1).PNG", "portfolio/gestante-06", 1400],
   ["IMG_3744.PNG", "portfolio/social-01", 1400],
   ["IMG_3742.PNG", "portfolio/social-02", 1400],
   ["IMG_3717.JPG_(1).jpeg", "portfolio/cabelo-01", 1400],
   ["IMG_3719.JPG.jpeg", "portfolio/cabelo-02", 1400],
   ["IMG_3724.PNG", "portfolio/cabelo-03", 1400],
+  ["IMG_3718.JPG_(1).jpeg", "portfolio/cabelo-04", 1400],
   ["IMG_3730.PNG", "portfolio/making-01", 1400],
   ["IMG_1416.PNG", "portfolio/making-02", 1400],
+  ["IMG_3731.PNG", "portfolio/making-03", 1400],
+  ["IMG_3729_(1).PNG", "portfolio/making-04", 1400],
   ["IMG_3726.PNG", "portfolio/artistico-01", 1400],
 ];
 
