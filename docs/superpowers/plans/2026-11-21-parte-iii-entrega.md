@@ -112,21 +112,15 @@ Commits previstos:
 ## Fase 2 — Higiene, segurança e remoção de rastros de IA
 Remover tudo que mencione ferramenta de IA, assistente ou agente.
 
-- [ ] Apagar `AGENTS.md`, `.cursor/`, `.claude/`, `docs/FERRAMENTAS-USADAS.md`.
-- [ ] Apagar `design/canvas/` (feito com ferramenta de design assistida por IA)
-  e as menções a ele em `docs/DESIGN-SYSTEM.md` e `README.md`.
-- [ ] Reescrever `README.md`, `CHANGELOG.md`, `docs/MAPA-DO-REPOSITORIO.md`,
-  `tools/serve.mjs`, `tools/build-pages.mjs`: tirar "Para outro agente",
-  "próximo agente", "Claude", "Cursor".
-- [ ] Limpar `.gitignore` (linha sobre `.cursor/`).
-- [ ] Revisar textos de `docs/` e `facul/` que descrevam o processo com IA.
-  O `relatorio-de-extensao.docx` precisa ser conferido por você, é binário.
-- [ ] Remover caminhos locais (`E:\...`, `C:\Users\...`).
-- [ ] `.gitignore` completo: `.env*` (exceto `.env.example`), `node_modules/`,
-  `*.log`, `dist/`, `fotos-originais/`.
-- [ ] Varredura de segredos (`gitleaks` ou `rg`) antes de cada push.
-- [ ] `LICENSE` (MIT para o código; fotos e marca são da Hellen, avisar no
-  README), `.editorconfig`, `CONTRIBUTING.md`, `.github/`.
+- [x] Apagar `AGENTS.md`, `.cursor/`, `.claude/`, `docs/FERRAMENTAS-USADAS.md`.
+- [x] Apagar `design/canvas/` e as menções a ele em `docs/DESIGN-SYSTEM.md` e `README.md`.
+- [x] Reescrever `README.md`, `CHANGELOG.md`, `docs/MAPA-DO-REPOSITORIO.md` e os scripts em `frontend/tools/`.
+- [x] Limpar `.gitignore`.
+- [x] Textos de `docs/` e `facul/` sem menção a ferramenta de IA. O `.docx` foi lido como texto: sem caminho de máquina e sem essa menção. Telefone e @ do studio são os dados públicos já usados no site.
+- [x] Remover caminhos locais (`E:\...`, `C:\Users\...`).
+- [x] `.gitignore` completo e `.env.example`.
+- [x] Varredura de segredos antes do push.
+- [x] `LICENSE` (MIT para o código; fotos e marca são da Hellen, aviso no README), `.editorconfig`, `CONTRIBUTING.md`, `.github/`.
 
 **Decisão sobre o histórico:** o primeiro commit (`251e63b`), já público,
 contém esses arquivos. Apagá-los num commit novo não os tira do histórico.

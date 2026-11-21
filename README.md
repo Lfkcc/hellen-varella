@@ -42,6 +42,11 @@ Ou abra `frontend/index.html` direto no navegador.
    dados que só a Hellen confirma.
 2. `node frontend/tools/check-links.mjs` — tem que passar sem erros.
 
+## Licença
+
+O código está sob a licença MIT (`LICENSE`). Fotos, marca, nome e textos da
+Hellen Varella pertencem a ela e não entram nessa licença.
+
 ## Histórico
 
-`git log` e `CHANGELOG.md`.
+`git log` e `CHANGELOG.md`. Como contribuir: `CONTRIBUTING.md`.
