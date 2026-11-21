@@ -169,23 +169,15 @@ mensagem, criado_em), `admins` (e-mail, hash de senha).
 Commits: `feat(db): schema inicial`, `feat(db): seed com combos e serviços`.
 
 ## Fase 6 — Fotos: triagem, preparo e contêineres
-- [ ] Criar `fotos-originais/` fora do git (no `.gitignore`) e copiar de
-  `~/Downloads` só as imagens únicas, sem as cópias `(1)` e `.JPG.jpeg`.
-- [ ] Classificar cada imagem por tema (gestante, noiva, making, cabelo,
-  antes-depois, social, artístico, Hellen, combo 1 a 4). Eu abro as imagens e
-  proponho a tabela; você corrige. Gera `docs/FOTOS-MAPA.md` (arquivo → tema →
-  slot). O uso no repositório e no site já está liberado por ela.
+- [x] Criar `fotos-originais/` fora do git e copiar de Downloads só as imagens únicas.
+- [x] Classificar e registrar em `docs/FOTOS-MAPA.md`. Não havia foto de noiva nem par de antes e depois neste lote.
 - [ ] Nomes finais padronizados: `portfolio/gestante-01.jpg`,
   `combos/combo-2.jpg`, `hellen/retrato.jpg`.
-- [ ] Remover EXIF (localização, aparelho) e recortar interface de captura de
-  tela. Sempre que possível, pedir o original à Hellen em vez do print.
-- [ ] Gerar versões otimizadas (`webp` + `jpg`, larguras 480/800/1200) com
-  `sharp` via `tools/optimize-images.mjs`. Meta: nenhuma imagem acima de
-  250 KB.
-- [ ] Criar os contêineres do front da tabela acima (HTML + CSS) ainda com as
-  imagens de reserva, num commit separado de cada.
-- [ ] Criar bucket público `fotos` no Supabase Storage e enviar as imagens.
-- [ ] Gravar as URLs no seed.
+- [x] Remover dados de câmera na exportação. Peças gráficas de preço ficaram de fora da grade.
+- [x] Versões otimizadas em jpg e webp, todas abaixo de 250 KB.
+- [x] Contêineres do hero, da Hellen, dos combos e do portfólio, com as fotos reais.
+- [x] Bucket público `fotos` no Supabase, com as imagens enviadas.
+- [x] URLs gravadas no seed e no banco.
 
 Commits: `feat(front): contêiner da foto da Hellen`,
 `feat(front): foto nos combos`, `feat(front): componente antes e depois`,
