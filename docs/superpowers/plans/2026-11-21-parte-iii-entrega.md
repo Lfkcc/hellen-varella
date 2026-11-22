@@ -234,13 +234,15 @@ Commits: `feat(back): login do administrador`, `feat(back): upload de fotos`,
   computador).
 
 ## Fase 10 — Revisão e testes
-- [ ] `node tools/check-links.mjs` sem erros.
-- [ ] Testes do backend verdes.
-- [ ] Lighthouse: acessibilidade, desempenho e SEO acima de 90 no celular.
-- [ ] Texto alternativo em todas as fotos.
-- [ ] Varredura final de segredos e de dados pessoais.
+- [x] `node tools/check-links.mjs` sem erros. Restam avisos de textos que só a Hellen confirma.
+- [x] Testes do backend verdes (18).
+- [x] Lighthouse no celular, medido em `http://127.0.0.1:4173/`: desempenho 98, acessibilidade 96, SEO 100.
+- [x] Texto alternativo em todas as fotos.
+- [x] Varredura final de segredos: nenhum no Git.
 
 ## Fase 11 — README e documentação
+- [x] README com descrição, comandos, `.env.example`, seed, conta de demonstração, estrutura, ligação do front com a API, equipe e licença. O link da API entra quando o Render existir.
+
 Conteúdo mínimo exigido: descrição do sistema e do negócio, tecnologias,
 passo a passo local, `.env.example`, comandos (`npm install`, `npm run dev`,
 `npm run db:seed`), como criar o banco no Supabase e ajustar a string de

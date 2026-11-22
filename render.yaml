@@ -1,0 +1,21 @@
+# Blueprint do backend. As chaves ficam no painel do Render, não neste arquivo.
+services:
+  - type: web
+    name: hellen-varella-api
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: CORS_ORIGIN
+        value: https://lfkcc.github.io
+      - key: DATABASE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true

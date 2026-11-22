@@ -27,20 +27,30 @@ Ou abra `frontend/index.html` direto no navegador.
 | Pasta | O que tem |
 |-------|-----------|
 | `frontend/index.html` | a vitrine |
-| `frontend/404.html`, `frontend/obrigada.html` | páginas de apoio (na identidade) |
-| `frontend/assets/css/` | design system em camadas (`tokens` → `base` → `layout` → `components` → `utilities`) |
-| `frontend/assets/js/` | módulos ativos (`nav`, `reveal`, `portfolio`, `whatsapp`, `pricing`) e ociosos (`lightbox`, `agenda`, `depoimentos`, `analytics`) |
-| `frontend/assets/img/`, `frontend/assets/fonts/` | READMEs com o que colocar (fotos e a fonte Perandory) |
-| `frontend/data/*.json` | **fonte de verdade do conteúdo** — cada arquivo diz de onde veio cada dado |
-| `frontend/tools/*.mjs` | `serve` (ativo) + `build-pages`, `new-section`, `check-links`, `optimize-images` |
-| `docs/` | mapa do repo, briefing, design system, slot-map, checklist, arquitetura |
+| `frontend/admin/` | painel da Hellen, fora do sitemap |
+| `frontend/404.html`, `frontend/obrigada.html` | páginas de apoio |
+| `frontend/assets/css/` | design system (`tokens` → `base` → `layout` → `components` → `utilities`) |
+| `frontend/assets/js/` | `api.js` lê o banco; `nav`, `reveal`, `portfolio`, `whatsapp` e `pricing` cuidam da página |
+| `frontend/assets/img/` | fotos otimizadas da vitrine |
+| `frontend/data/*.json` | reserva estática, no mesmo formato da API |
+| `frontend/tools/*.mjs` | `serve`, `check-links`, `optimize-images` |
+| `backend/` | API Node e Express |
+| `database/` | `schema.sql` e `seed.sql` |
+| `docs/` | briefing, checklist e roteiro |
 | `facul/` | entregas anteriores da disciplina |
 
-## Antes de publicar
+## Comandos
 
-1. `docs/CHECKLIST-CONTEUDO.md` — falta principalmente **as fotos** e alguns
-   dados que só a Hellen confirma.
-2. `node frontend/tools/check-links.mjs` — tem que passar sem erros.
+```bash
+node frontend/tools/serve.mjs          # site em http://127.0.0.1:4173/
+node frontend/tools/check-links.mjs    # links internos
+cd backend && npm install
+npm run dev                            # API em http://127.0.0.1:3000/
+npm test
+npm run db:seed
+```
+
+O modelo de variáveis é `.env.example`. Copie para `backend/.env` e preencha na sua máquina. Esse arquivo não entra no Git.
 
 ## API
 
@@ -56,7 +66,11 @@ No computador, `frontend/assets/js/api.js` lê essa API e troca preços, fotos, 
 
 ## Site publicado
 
-A vitrine está em https://lfkcc.github.io/hellen-varella/. O GitHub Pages publica a pasta `frontend/`. Lá o visitante vê o site estático e o WhatsApp. O formulário e os dados ao vivo dependem da API, que ainda roda só na máquina local: a conta do Render não está configurada neste ambiente. Quando o backend tiver URL pública, ela entra em `window.HV_API` e a origem `https://lfkcc.github.io` entra em `CORS_ORIGIN`. O painel (`/admin/`) já tem um campo para esse endereço.
+A vitrine está em https://lfkcc.github.io/hellen-varella/. O GitHub Pages publica a pasta `frontend/`. Lá o visitante vê o site estático e o WhatsApp.
+
+O backend ainda não tem URL pública. O arquivo `render.yaml` descreve o serviço (pasta `backend/`, plano grátis, checagem em `/health`). No painel do Render, com login pelo GitHub, aplique esse blueprint e preencha `DATABASE_URL`, `SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY`. O `JWT_SECRET` o Render gera. O plano grátis dorme: a primeira visita depois de um tempo parado pode levar cerca de um minuto, e a página continua com o HTML já escrito enquanto a API não responde.
+
+Quando a URL existir, ela entra em `window.HV_API` antes dos scripts, e `https://lfkcc.github.io` já está previsto em `CORS_ORIGIN`. O painel (`/admin/`) tem um campo para esse endereço. Aí dá para testar o formulário, o login e o envio de foto a partir do site público.
 
 ## Banco
 
@@ -87,6 +101,12 @@ Conta de demonstração, só para o professor avaliar o painel. Não é a senha 
 
 - E-mail: `professor@studiohellen.test`
 - Senha: `studio-demo-7kQ4`
+
+## Equipe
+
+Gabriel Joaquim, Lucas Fernandes, Luiz Felipe e Otavio. O repositório público está em nome de [Luiz Felipe](https://github.com/Lfkcc). O que cada pessoa fez entra em `docs/RELATORIO-COLABORACAO.md` só quando o grupo confirmar.
+
+Ainda falta a Hellen confirmar e-mail, endereço, horário e duas respostas da FAQ (outras cidades e formas de pagamento).
 
 ## Licença
 
