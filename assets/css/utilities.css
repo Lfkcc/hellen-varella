@@ -118,3 +118,16 @@
 .agenda-slot[data-status="livre"] { border-color: var(--cta); color: var(--cta); }
 .agenda-slot[data-status="poucas"] { background: var(--support); }
 .agenda-slot[data-status="cheio"] { opacity: 0.45; text-decoration: line-through; }
+
+/* Seções abaixo da primeira tela não entram no layout inicial. */
+#valores,
+#portfolio,
+#hellen,
+#cursos,
+#divas,
+#como-funciona,
+#faq,
+#agenda {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}

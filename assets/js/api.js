@@ -146,6 +146,8 @@
         picture.className = "work__media";
         var img = document.createElement("img");
         img.className = "work__photo";
+        img.loading = "lazy";
+        img.decoding = "async";
         img.src = obra.foto_url;
         img.alt = obra.kicker + ": " + semMarcacao(obra.titulo);
         picture.append(img);

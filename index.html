@@ -23,7 +23,9 @@
        substituta web de Perandory Condensed (ver docs/DESIGN-SYSTEM.md). -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/img/hero/retrato.webp" type="image/webp" fetchpriority="high" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Poppins:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Poppins:wght@400;500;600&display=swap" /></noscript>
 
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/base.css" />
@@ -102,7 +104,7 @@
             <figure class="photo-frame">
               <picture>
                 <source srcset="assets/img/hero/retrato.webp" type="image/webp" />
-                <img class="photo-frame__img" src="assets/img/hero/retrato.jpg" alt="Cliente com maquiagem profissional, olhar direto, no studio Hellen Varella" width="380" height="475" />
+                <img class="photo-frame__img" src="assets/img/hero/retrato.jpg" alt="Cliente com maquiagem profissional, olhar direto, no studio Hellen Varella" width="380" height="475" fetchpriority="high" decoding="async" />
               </picture>
               <figcaption class="photo-frame__caption">a sua melhor versão, revelada</figcaption>
             </figure>
@@ -228,7 +230,7 @@
           <article class="pack reveal" data-id="combo-1">
             <picture class="pack__media">
               <source srcset="assets/img/combos/combo-1.webp" type="image/webp" />
-              <img class="pack__photo" src="assets/img/combos/combo-1.jpg" alt="Retrato com maquiagem profissional" width="800" height="600" />
+              <img class="pack__photo" loading="lazy" decoding="async" src="assets/img/combos/combo-1.jpg" alt="Retrato com maquiagem profissional" width="800" height="600" />
             </picture>
             <span class="pack__kicker">Combo 1</span>
             <h3>Maquiagem + ensaio</h3>
@@ -245,7 +247,7 @@
           <article class="pack pack--feature reveal" data-id="combo-2">
             <picture class="pack__media">
               <source srcset="assets/img/combos/combo-2.webp" type="image/webp" />
-              <img class="pack__photo" src="assets/img/combos/combo-2.jpg" alt="Cabelo longo com maquiagem, pronto para o ensaio" width="800" height="600" />
+              <img class="pack__photo" loading="lazy" decoding="async" src="assets/img/combos/combo-2.jpg" alt="Cabelo longo com maquiagem, pronto para o ensaio" width="800" height="600" />
             </picture>
             <span class="pack__kicker">Combo 2 · o mais pedido</span>
             <h3>Maquiagem + cabelo + ensaio</h3>
@@ -263,7 +265,7 @@
           <article class="pack reveal" data-id="combo-3">
             <picture class="pack__media">
               <source srcset="assets/img/combos/combo-3.webp" type="image/webp" />
-              <img class="pack__photo" src="assets/img/combos/combo-3.jpg" alt="Penteado preso e produção completa" width="800" height="600" />
+              <img class="pack__photo" loading="lazy" decoding="async" src="assets/img/combos/combo-3.jpg" alt="Penteado preso e produção completa" width="800" height="600" />
             </picture>
             <span class="pack__kicker">Combo 3</span>
             <h3>Produção completa + ensaio</h3>
@@ -282,7 +284,7 @@
           <article class="pack reveal" data-id="combo-4">
             <picture class="pack__media">
               <source srcset="assets/img/combos/combo-4.webp" type="image/webp" />
-              <img class="pack__photo" src="assets/img/combos/combo-4.jpg" alt="Ensaio fotográfico, retrato na janela do carro" width="800" height="600" />
+              <img class="pack__photo" loading="lazy" decoding="async" src="assets/img/combos/combo-4.jpg" alt="Ensaio fotográfico, retrato na janela do carro" width="800" height="600" />
             </picture>
             <span class="pack__kicker">Combo 4</span>
             <h3>Só ensaio fotográfico</h3>
@@ -374,7 +376,7 @@
           <article class="work work--wide work--photo reveal" data-cat="gestante">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/gestante-01.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/gestante-01.jpg" alt="Gestante de vestido preto, de perfil, com a mão na barriga" width="1200" height="800" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/gestante-01.jpg" alt="Gestante de vestido preto, de perfil, com a mão na barriga" width="1200" height="800" />
             </picture>
             <span class="work__kicker">Gestante</span>
             <h3>Corpo, tempo, <em>luz</em></h3>
@@ -383,7 +385,7 @@
           <article class="work work--photo reveal" data-cat="gestante">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/gestante-02.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/gestante-02.jpg" alt="Colagem de ensaio gestante, de frente e com o parceiro" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/gestante-02.jpg" alt="Colagem de ensaio gestante, de frente e com o parceiro" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Gestante</span>
             <h3>De frente e <em>junto</em></h3>
@@ -392,7 +394,7 @@
           <article class="work work--photo reveal" data-cat="gestante">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/gestante-03.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/gestante-03.jpg" alt="Gestante de vestido marrom, olhando para baixo, luz quente" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/gestante-03.jpg" alt="Gestante de vestido marrom, olhando para baixo, luz quente" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Gestante</span>
             <h3>Luz <em>quente</em></h3>
@@ -401,7 +403,7 @@
           <article class="work work--photo reveal" data-cat="gestante">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/gestante-04.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/gestante-04.jpg" alt="Gestante de vestido longo, em pé, no studio" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/gestante-04.jpg" alt="Gestante de vestido longo, em pé, no studio" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Gestante</span>
             <h3>O corpo <em>inteiro</em></h3>
@@ -410,7 +412,7 @@
           <article class="work work--photo reveal" data-cat="gestante">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/gestante-05.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/gestante-05.jpg" alt="Colagem de quatro poses de um casal em ensaio gestante" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/gestante-05.jpg" alt="Colagem de quatro poses de um casal em ensaio gestante" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Gestante</span>
             <h3>Quatro <em>quadros</em></h3>
@@ -419,7 +421,7 @@
           <article class="work work--photo reveal" data-cat="gestante">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/gestante-06.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/gestante-06.jpg" alt="Casal em ensaio gestante, em preto e branco" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/gestante-06.jpg" alt="Casal em ensaio gestante, em preto e branco" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Gestante</span>
             <h3>A dois</h3>
@@ -428,7 +430,7 @@
           <article class="work work--photo reveal" data-cat="social">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/social-01.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/social-01.jpg" alt="Mãe e filha de testa encostada, em preto e branco" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/social-01.jpg" alt="Mãe e filha de testa encostada, em preto e branco" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Social</span>
             <h3>De testa <em>junta</em></h3>
@@ -437,7 +439,7 @@
           <article class="work work--photo reveal" data-cat="social">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/social-02.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/social-02.jpg" alt="Família com uma criança, em retrato de estúdio" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/social-02.jpg" alt="Família com uma criança, em retrato de estúdio" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Social</span>
             <h3>Quem vai <em>junto</em></h3>
@@ -446,7 +448,7 @@
           <article class="work work--photo reveal" data-cat="cabelo">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/cabelo-01.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/cabelo-01.jpg" alt="Cabelo liso e longo, visto de costas" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/cabelo-01.jpg" alt="Cabelo liso e longo, visto de costas" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Cabelo</span>
             <h3>Camadas <em>leves</em></h3>
@@ -455,7 +457,7 @@
           <article class="work work--photo reveal" data-cat="cabelo">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/cabelo-02.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/cabelo-02.jpg" alt="Corte em camadas na altura do ombro, visto de costas" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/cabelo-02.jpg" alt="Corte em camadas na altura do ombro, visto de costas" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Cabelo</span>
             <h3>Na altura do <em>ombro</em></h3>
@@ -464,7 +466,7 @@
           <article class="work work--photo reveal" data-cat="cabelo">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/cabelo-03.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/cabelo-03.jpg" alt="Rabo de cavalo alto, de perfil, no salão" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/cabelo-03.jpg" alt="Rabo de cavalo alto, de perfil, no salão" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Cabelo</span>
             <h3>Rabo de <em>cavalo</em></h3>
@@ -473,7 +475,7 @@
           <article class="work work--photo reveal" data-cat="cabelo">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/cabelo-04.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/cabelo-04.jpg" alt="Coque visto de costas e no espelho" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/cabelo-04.jpg" alt="Coque visto de costas e no espelho" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Cabelo</span>
             <h3>O <em>coque</em></h3>
@@ -482,7 +484,7 @@
           <article class="work work--photo reveal" data-cat="making">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/making-01.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/making-01.jpg" alt="Cabelo sendo finalizado na cadeira do studio" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/making-01.jpg" alt="Cabelo sendo finalizado na cadeira do studio" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Making of</span>
             <h3>O antes da foto</h3>
@@ -491,7 +493,7 @@
           <article class="work work--photo reveal" data-cat="making">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/making-02.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/making-02.jpg" alt="Bastidor do ensaio, com luz e celular no enquadramento" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/making-02.jpg" alt="Bastidor do ensaio, com luz e celular no enquadramento" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Making of</span>
             <h3>A luz no <em>lugar</em></h3>
@@ -500,7 +502,7 @@
           <article class="work work--photo reveal" data-cat="making">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/making-03.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/making-03.jpg" alt="Profissional de vestido vermelho finalizando o cabelo de uma cliente" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/making-03.jpg" alt="Profissional de vestido vermelho finalizando o cabelo de uma cliente" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Making of</span>
             <h3>No meio do <em>caminho</em></h3>
@@ -509,7 +511,7 @@
           <article class="work work--photo reveal" data-cat="making">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/making-04.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/making-04.jpg" alt="Maquiagem sendo aplicada, com a cliente deitada na cadeira" width="800" height="1000" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/making-04.jpg" alt="Maquiagem sendo aplicada, com a cliente deitada na cadeira" width="800" height="1000" />
             </picture>
             <span class="work__kicker">Making of</span>
             <h3>A make em <em>curso</em></h3>
@@ -518,7 +520,7 @@
           <article class="work work--dark work--photo reveal" data-cat="artistico">
             <picture class="work__media">
               <source srcset="assets/img/portfolio/artistico-01.webp" type="image/webp" />
-              <img class="work__photo" src="assets/img/portfolio/artistico-01.jpg" alt="Retrato em luz azul, olhar direto" width="1200" height="800" />
+              <img class="work__photo" loading="lazy" decoding="async" src="assets/img/portfolio/artistico-01.jpg" alt="Retrato em luz azul, olhar direto" width="1200" height="800" />
             </picture>
             <span class="work__kicker">Artístico</span>
             <h3>O outro <em>lado</em></h3>
@@ -535,7 +537,7 @@
           <aside class="persona__card reveal">
             <picture>
               <source srcset="assets/img/hellen/retrato.webp" type="image/webp" />
-              <img class="persona__photo" src="assets/img/hellen/retrato.jpg" alt="Hellen Varella, de blusa preta, no retrato do studio" width="640" height="800" />
+              <img class="persona__photo" loading="lazy" decoding="async" src="assets/img/hellen/retrato.jpg" alt="Hellen Varella, de blusa preta, no retrato do studio" width="640" height="800" />
             </picture>
             <p class="eyebrow" style="color: var(--cta)">Oi, eu sou a</p>
             <p class="name">Hellen</p>
