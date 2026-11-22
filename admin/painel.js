@@ -1,7 +1,13 @@
 const $ = (id) => document.getElementById(id);
 
+function apiPadrao() {
+  const host = location.hostname;
+  if (host === "127.0.0.1" || host === "localhost") return "http://127.0.0.1:3000";
+  return "https://hellen-varella-api.onrender.com";
+}
+
 function base() {
-  return (localStorage.getItem("hv-api") || "http://127.0.0.1:3000").replace(/\/$/, "");
+  return (localStorage.getItem("hv-api") || apiPadrao()).replace(/\/$/, "");
 }
 
 function aviso(texto) {
@@ -490,5 +496,5 @@ async function enviarFoto(input, destino, depois) {
 }
 
 const apiSalva = localStorage.getItem("hv-api");
-if (apiSalva) document.querySelector("#form-login [name=api]").value = apiSalva;
+document.querySelector("#form-login [name=api]").value = apiSalva || apiPadrao();
 if (sessionStorage.getItem("hv-token")) mostrarPainel();

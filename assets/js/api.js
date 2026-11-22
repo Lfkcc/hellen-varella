@@ -3,10 +3,13 @@
 (function () {
   "use strict";
 
+  var API_PUBLICA = "https://hellen-varella-api.onrender.com";
+
   function base() {
     if (window.HV_API) return String(window.HV_API).replace(/\/$/, "");
     var host = location.hostname;
     if (host === "127.0.0.1" || host === "localhost") return "http://127.0.0.1:3000";
+    if (host.endsWith("github.io")) return API_PUBLICA;
     return "";
   }
 
