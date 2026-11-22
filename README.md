@@ -62,22 +62,25 @@ npm run dev
 
 A rota de saúde responde em http://127.0.0.1:3000/health.
 
-No computador, `frontend/assets/js/api.js` lê essa API e troca preços, fotos, portfólio e perguntas. Se a API não responder, a página fica com o HTML que já está no arquivo. O formulário no fim da página envia `POST /api/contatos` e mostra "Enviando…" ou o erro. Fora de localhost o script não chama `127.0.0.1`; um endereço público entra por `window.HV_API` antes dos scripts.
+No computador, `frontend/assets/js/api.js` lê a API local e troca preços, fotos, portfólio e perguntas. Se a API não responder, a página fica com o HTML que já está no arquivo. O formulário no fim da página envia `POST /api/contatos` e mostra "Enviando…" ou o erro. No site publicado o mesmo script chama https://hellen-varella-api.onrender.com. `window.HV_API`, se existir antes dos scripts, substitui esse endereço.
 
 ## Site publicado
 
-A vitrine está em https://lfkcc.github.io/hellen-varella/. O GitHub Pages publica a pasta `frontend/`. Lá o visitante vê o site estático e o WhatsApp.
+- Vitrine: https://lfkcc.github.io/hellen-varella/
+- API: https://hellen-varella-api.onrender.com
+- Saúde: https://hellen-varella-api.onrender.com/health
+- Painel: https://lfkcc.github.io/hellen-varella/admin/
 
-O backend ainda não tem URL pública. O arquivo `render.yaml` descreve o serviço (pasta `backend/`, plano grátis, checagem em `/health`). No painel do Render, com login pelo GitHub, aplique esse blueprint e preencha `DATABASE_URL`, `SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY`. O `JWT_SECRET` o Render gera. O plano grátis dorme: a primeira visita depois de um tempo parado pode levar cerca de um minuto, e a página continua com o HTML já escrito enquanto a API não responde.
+O GitHub Pages publica a pasta `frontend/`. O `render.yaml` descreve o backend (pasta `backend/`, plano grátis, checagem em `/health`). As chaves ficam só no painel do Render: `DATABASE_URL`, `SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY`. O `JWT_SECRET` o Render gera. O `CORS_ORIGIN` é `https://lfkcc.github.io`.
 
-Quando a URL existir, ela entra em `window.HV_API` antes dos scripts, e `https://lfkcc.github.io` já está previsto em `CORS_ORIGIN`. O painel (`/admin/`) tem um campo para esse endereço. Aí dá para testar o formulário, o login e o envio de foto a partir do site público.
+O plano grátis dorme. A primeira visita depois de um tempo parado pode levar cerca de um minuto. Enquanto a API não responde, a página continua com o HTML já escrito e o formulário pede para chamar no WhatsApp. No painel, o campo "Endereço da API" já vem com a URL pública; no computador ele volta para `http://127.0.0.1:3000`.
 
 ## Banco
 
 O Postgres fica no Supabase. Os scripts estão em `database/schema.sql` e `database/seed.sql`.
 
-1. No projeto do Supabase, abra Project Settings → Database e copie a connection string (URI).
-2. Cole em `backend/.env` como `DATABASE_URL`. Esse arquivo não entra no Git.
+1. No projeto do Supabase, abra Project Settings → Database e copie a connection string do **Session pooler** (o host termina em `pooler.supabase.com` e o usuário é `postgres.` mais o código do projeto).
+2. Cole em `backend/.env` como `DATABASE_URL`. Esse arquivo não entra no Git. A conexão direta (`db.….supabase.co`) é só IPv6; o Render não alcança esse host.
 3. Na raiz do backend:
 
 ```bash

@@ -250,13 +250,13 @@ conexão, credenciais de demonstração do painel, links do deploy, estrutura de
 pastas, como o front se liga ao back, equipe e licença.
 
 ## Fase 12 — Deploy
-A vitrine pública está no GitHub Pages (`frontend/`). O backend continua local até existir conta no Render.
-- [ ] Backend no Render (root `backend/`, variáveis no painel).
+A vitrine pública está no GitHub Pages (`frontend/`). A API está em https://hellen-varella-api.onrender.com.
+- [x] Backend no Render (root `backend/`, variáveis no painel). A conexão usa o pooler IPv4 do Supabase.
 - [x] Front publicado (GitHub Pages, pasta `frontend/`). Cloudflare Pages continua o destino planejado, se a conta existir.
-- [ ] Atualizar `CORS_ORIGIN` e `API_URL`; testar de ponta a ponta, incluindo
+- [x] Atualizar `CORS_ORIGIN` e `API_URL`; testar de ponta a ponta, incluindo
   login no painel e upload de foto.
-- [ ] Registrar os dois links no README e na descrição do repositório.
-- [ ] Nota sobre o "cold start" do Render grátis.
+- [x] Registrar os dois links no README e na descrição do repositório.
+- [x] Nota sobre o "cold start" do Render grátis.
 
 ## Fase 13 — Entrega e evidências (fora do código)
 - [ ] Apresentar o sistema à Hellen, inclusive ensinando o painel (print,
