@@ -46,6 +46,7 @@
   color: var(--on-dark);
   border-color: var(--on-dark-55);
 }
+.section--dark a:not(.button) { color: var(--on-dark); }
 .section--dark .button--ghost:hover { background: var(--on-dark); color: var(--ink); }
 
 .text-link {

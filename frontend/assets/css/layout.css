@@ -141,6 +141,8 @@
 }
 
 .hero .lead { color: var(--on-dark-80); }
+.hero .button--ghost { color: var(--on-dark); border-color: var(--on-dark-55); }
+.hero .button--ghost:hover { background: var(--on-dark); color: var(--ink); }
 
 .hero__actions {
   display: flex;

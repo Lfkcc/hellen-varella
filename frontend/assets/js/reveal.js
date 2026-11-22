@@ -1,8 +1,7 @@
 /* reveal.js — entrada suave ao rolar (enfeite, nunca requisito).
    Camadas de segurança para que NENHUM conteúdo fique preso invisível:
    1) IntersectionObserver revela ao entrar na viewport (efeito principal);
-   2) listener de scroll revela o que estiver perto da viewport;
-   3) após o load, um timeout revela tudo que ainda restar. */
+   2) após o load, um timeout revela tudo que ainda restar. */
 (function () {
   "use strict";
 
@@ -30,19 +29,9 @@
   );
   els.forEach(function (el) { io.observe(el); });
 
-  // Camada 2: scroll de reforço
-  var onScroll = function () {
-    var vh = window.innerHeight;
-    document.querySelectorAll(".reveal:not(.is-visible)").forEach(function (el) {
-      if (el.getBoundingClientRect().top < vh * 1.25) show(el);
-    });
-  };
-  window.addEventListener("scroll", onScroll, { passive: true });
-
-  // Camada 3: rede final — revela tudo que sobrou
+  // Rede final — revela tudo que o observer ainda não mostrou.
   var flushAll = function () {
     document.querySelectorAll(".reveal:not(.is-visible)").forEach(show);
-    window.removeEventListener("scroll", onScroll);
   };
   if (document.readyState === "complete") {
     setTimeout(flushAll, 2500);
