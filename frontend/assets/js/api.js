@@ -67,8 +67,8 @@
         a.textContent = studio.contato.telefone_exibicao;
       });
     }
-    trocarFoto(document.querySelector(".photo-frame__img"), studio.fotos && studio.fotos.hero);
-    trocarFoto(document.querySelector(".persona__photo"), studio.fotos && studio.fotos.hellen);
+    // Hero e retrato da Hellen ficam nos arquivos do site.
+    // Os endereços guardados na API ainda apontam para a selfie dela e para outra pessoa.
     var detalhe = document.querySelector("[data-slot='agenda.detalhe']");
     var partes = [studio.contato.endereco, studio.contato.horario].filter(Boolean);
     if (detalhe && partes.length) {
