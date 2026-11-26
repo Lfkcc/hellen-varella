@@ -316,6 +316,7 @@
 .work--photo { min-height: 22rem; }
 .work--photo .work__media { position: absolute; inset: 0; }
 .work--photo .work__photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+.work--dark.work--photo .work__photo { object-position: center 16%; }
 .work--photo::after {
   content: "";
   position: absolute;
@@ -440,7 +441,7 @@
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 12%;
   border-radius: var(--radius-sm);
   margin-bottom: var(--space-sm);
   display: block;
